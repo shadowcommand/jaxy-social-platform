@@ -1,0 +1,39 @@
+# Composer & Vendor
+/vendor/
+composer.phar
+
+# Environment & Secrets
+.env
+.env.*
+mysql.php
+
+# User Uploads (keep folder structure, ignore files)
+/uploads/avatars/*
+!/uploads/avatars/default-avatar.png
+!/uploads/avatars/.gitkeep
+
+# Test & Scratch Files
+/_scratch/
+/test/
+test.php
+mytest.php
+test_htaccess*.php
+info.php
+
+# Python / Virtualenv
+venv_internal_api/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+.pyd
+.pytest_cache/
+*.egg-info/
+
+# OS & IDE Files
+.DS_Store
+.idea/
+.vscode/
+*.log
