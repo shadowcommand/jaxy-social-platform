@@ -7,9 +7,9 @@ app = Flask(__name__)
 def get_db_connection():
     return pymysql.connect(
         host='localhost',
-        user='jaxy',
-        password='1234',
-        database='jaxyApp',
+        user='YOUR_USER_NAME',
+        password='YOUR_PASSWORD',
+        database='YOUR_DATABASE_NAME',
         charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor
     )
@@ -29,7 +29,7 @@ def get_user(user_id):
             user = cursor.fetchone()
             if not user:
                 abort(404, description="User not found")
-            # تبدیل تاریخ به رشته
+                
             if user.get('created_at'):
                 user['created_at'] = user['created_at'].isoformat()
             if user.get('updated_at'):
